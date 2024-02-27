@@ -1,18 +1,13 @@
-name: Github Action Sharing - Greeting
+name: Github Action Sharing - List all files
 
 on:
   push 
 
 jobs:
-  Greeting:
+  List:
     runs-on: ubuntu-latest
     steps:
-      - name: Say hello
-        run: echo "${{ env.GREETING }} $FULL_NAME. Today is ${{ env.DAY_OF_WEEK }}"
-        env:
-            FULL_NAME: 'Eric ji'
-    env:
-      GREETING: Hello
-
-env:  
-  DAY_OF_WEEK: Monday
+      - name : List
+        run : ls -al
+      - name : pwd
+        run : pwd
