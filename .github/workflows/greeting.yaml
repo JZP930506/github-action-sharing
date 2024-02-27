@@ -7,7 +7,7 @@ jobs:
   List:
     runs-on: ubuntu-latest
     steps:
+      - name : Checkout
+        run : actions/checkout@v4
       - name : List
         run : ls -al
-      - name : pwd
-        run : pwd
